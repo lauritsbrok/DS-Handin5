@@ -64,8 +64,6 @@ func askAuction(client *Client) {
 
 	serverConnections := []proto.AuctionSystemClient{serverConnection1, serverConnection2, serverConnection3}
 
-	serverConnection1 = serverConnections[0]
-
 	// Wait for input in the client terminal
 	scanner := bufio.NewScanner(os.Stdin)
 	log.Printf("Type 'result' to get the highest bid. Type 'bid' to make a bid.")

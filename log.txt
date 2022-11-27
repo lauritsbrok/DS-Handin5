@@ -1,0 +1,82 @@
+Server 1
+    2022/11/27 10:43:06 Started server at port: 8001
+    2022/11/27 10:43:14 Client with ID 8004 makes a bid for 10 
+    2022/11/27 10:43:17 Client with ID 8004 asked for the highest bid
+    2022/11/27 10:43:23 Client with ID 8004 makes a bid for 20 
+    2022/11/27 10:43:26 Oh no, i'm crashing. Good thing there is other replicas.
+
+Server 2
+    2022/11/27 10:43:06 Started server at port: 8002
+    2022/11/27 10:43:14 Client with ID 8004 makes a bid for 10 
+    2022/11/27 10:43:17 Client with ID 8004 asked for the highest bid
+    2022/11/27 10:43:23 Client with ID 8004 makes a bid for 20 
+    2022/11/27 10:43:30 Client with ID 8004 asked for the highest bid
+    2022/11/27 10:43:42 Client with ID 8004 makes a bid for 10 
+    2022/11/27 10:43:57 Client with ID 8004 makes a bid for 30 
+    2022/11/27 10:44:06 Auction is now closed
+    2022/11/27 10:44:15 Client with ID 8004 asked for the highest bid
+    2022/11/27 10:44:24 Client with ID 8004 makes a bid for 50 
+
+Server 3
+    2022/11/27 10:43:07 Started server at port: 8003
+    2022/11/27 10:43:14 Client with ID 8004 makes a bid for 10 
+    2022/11/27 10:43:17 Client with ID 8004 asked for the highest bid
+    2022/11/27 10:43:23 Client with ID 8004 makes a bid for 20 
+    2022/11/27 10:43:30 Client with ID 8004 asked for the highest bid
+    2022/11/27 10:43:42 Client with ID 8004 makes a bid for 10 
+    2022/11/27 10:43:57 Client with ID 8004 makes a bid for 30 
+    2022/11/27 10:44:07 Auction is now closed
+    2022/11/27 10:44:15 Client with ID 8004 asked for the highest bid
+    2022/11/27 10:44:24 Client with ID 8004 makes a bid for 50
+
+Client 4
+    2022/11/27 10:43:09 Connected to the server at port 8001
+    2022/11/27 10:43:09 Connected to the server at port 8002
+    2022/11/27 10:43:09 Connected to the server at port 8003
+    2022/11/27 10:43:09 Type 'result' to get the highest bid. Type 'bid' to make a bid.
+    bid   
+    2022/11/27 10:43:12 How much would you like to bid? Enter a valid positive number:
+    10
+    2022/11/27 10:43:14 Server 1 says: Success: The new highest bid is 10
+    2022/11/27 10:43:14 Server 2 says: Success: The new highest bid is 10
+    2022/11/27 10:43:14 Server 3 says: Success: The new highest bid is 10
+    result
+    2022/11/27 10:43:17 Server 1 says: The highest bid is 10
+    2022/11/27 10:43:17 Server 2 says: The highest bid is 10
+    2022/11/27 10:43:17 Server 3 says: The highest bid is 10
+    bid
+    2022/11/27 10:43:21 How much would you like to bid? Enter a valid positive number:
+    20
+    2022/11/27 10:43:23 Server 1 says: Success: The new highest bid is 20
+    2022/11/27 10:43:23 Server 2 says: Success: The new highest bid is 20
+    2022/11/27 10:43:23 Server 3 says: Success: The new highest bid is 20
+    result
+    2022/11/27 10:43:30 Server 1 is currently down, skipping ...
+    2022/11/27 10:43:30 Server 2 says: The highest bid is 20
+    2022/11/27 10:43:30 Server 3 says: The highest bid is 20
+    bid 
+    2022/11/27 10:43:35 Invalid command. Can you type 'result' or 'bid'
+    bid
+    2022/11/27 10:43:40 How much would you like to bid? Enter a valid positive number:
+    10
+    2022/11/27 10:43:42 Server 1 is currently down, skipping ...
+    2022/11/27 10:43:42 Server 2 says: Failed: Your bid of 10 was not high enough. The highest bid is 20
+    2022/11/27 10:43:42 Server 3 says: Failed: Your bid of 10 was not high enough. The highest bid is 20
+    bid 30  
+    2022/11/27 10:43:52 Invalid command. Can you type 'result' or 'bid'
+    bid 
+    2022/11/27 10:43:54 How much would you like to bid? Enter a valid positive number:
+    30
+    2022/11/27 10:43:57 Server 1 is currently down, skipping ...
+    2022/11/27 10:43:57 Server 2 says: Success: The new highest bid is 30
+    2022/11/27 10:43:57 Server 3 says: Success: The new highest bid is 30
+    result
+    2022/11/27 10:44:15 Server 1 is currently down, skipping ...
+    2022/11/27 10:44:15 Server 2 says: The action is over. The winner was client 8004 with a bid of 30
+    2022/11/27 10:44:15 Server 3 says: The action is over. The winner was client 8004 with a bid of 30
+    bid
+    2022/11/27 10:44:21 How much would you like to bid? Enter a valid positive number:
+    50
+    2022/11/27 10:44:24 Server 1 is currently down, skipping ...
+    2022/11/27 10:44:24 Server 2 says: The bid is over. Type 'result' to see who won.
+    2022/11/27 10:44:24 Server 3 says: The bid is over. Type 'result' to see who won.

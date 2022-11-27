@@ -103,7 +103,7 @@ func (c *Server) MakeABid(ctx context.Context, in *proto.MakeBid) (*proto.Ack, e
 }
 
 func CloseAuction() {
-	time.Sleep(45 * time.Second)
+	time.Sleep(60 * time.Second)
 	isBidCompleted = true
 	log.Printf("Auction is now closed")
 }
@@ -111,7 +111,7 @@ func CloseAuction() {
 func RandomCrash() {
 	time.Sleep(20 * time.Second)
 	rand.Seed(time.Now().UnixNano())
-	num := rand.Intn(5-1+1) + 1
+	num := rand.Intn(7-1+1) + 1
 	if num == 2 || num == 4 {
 		log.Print("Oh no, i'm crashing. Good thing there is other replicas.")
 		os.Exit(0)
